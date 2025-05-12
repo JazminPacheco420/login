@@ -1,6 +1,6 @@
 <template>
   <div class="login">
-    <h1 class="title">Login</h1>
+    <h1 class="title">Iniciar sesión</h1>
     <LoginForm />
   </div>
 </template>

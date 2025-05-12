@@ -1,18 +1,25 @@
 <template>
-  <form class="form" @submit.prevent="login">
-    <label class="form-label" for="email">Email:</label>
-    <input v-model="email" class="form-input" type="email" id="email" placeholder="Email" />
-    <p v-if="errorEmail" class="error">{{ errorEmail }}</p>
+  <div class="form-container">
+    <form class="form" @submit.prevent="login">
+      <div class="form-group">
+        <label class="form-label" for="email">Email:</label>
+        <input v-model="email" class="form-input" type="email" id="email" placeholder="Email" />
+        <p v-if="errorEmail" class="error">{{ errorEmail }}</p>
+      </div>
 
-    <label class="form-label" for="password">Password:</label>
-    <input v-model="password" class="form-input" type="password" id="password" placeholder="Password" />
-    <p v-if="errorPassword" class="error">{{ errorPassword }}</p>
+      <div class="form-group">
+        <label class="form-label" for="password">Contraseña:</label>
+        <input v-model="password" class="form-input" type="password" id="password" placeholder="Password" />
+        <p v-if="errorPassword" class="error">{{ errorPassword }}</p>
+      </div>
 
-    <p v-if="error" class="error">{{ error }}</p>
+      <p v-if="error" class="error">{{ error }}</p>
 
-    <input class="form-submit" type="submit" value="Login" />
-  </form>
+      <input class="form-submit" type="submit" value="Login" />
+    </form>
+  </div>
 </template>
+
 
 <script>
 export default {
@@ -53,19 +60,39 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #ffffff; // Puedes cambiar esto por una imagen o color de fondo
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center; // centra label e input
+  width: 100%;
+}
+
 .form {
   width: 300px;
-  margin: auto;
   padding: 20px;
-  background: rgba(19, 35, 47, 0.9);
+  background: rgb(64, 64, 86);
   border-radius: 5px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
 .form-label {
   display: block;
   margin: 10px 0 5px;
   color: white;
+  font-weight: bold;
+  text-align: center; // centra el texto
+  //width: 100%;         // asegura que ocupe todo el ancho del formulario
 }
+
+
 .form-input {
   width: 100%;
   padding: 8px;
@@ -73,6 +100,7 @@ export default {
   background: none;
   color: white;
 }
+
 .form-submit {
   background: #1ab188;
   border: none;
@@ -81,6 +109,7 @@ export default {
   margin-top: 10px;
   cursor: pointer;
 }
+
 .error {
   color: #ff4a96;
   font-size: 0.9rem;
