@@ -38,7 +38,7 @@
         required
         placeholder="Password"
       />
-      <label class="form-label" for="password-repeat">Repite la contraseña:</label>
+      <label class="form-label" for="password-repeat">Confirma la contraseña:</label>
       <input
         v-model="passwordRepeat"
         class="form-input"

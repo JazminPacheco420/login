@@ -3,19 +3,19 @@
     <form class="form" @submit.prevent="login">
       <div class="form-group">
         <label class="form-label" for="email">Email:</label>
-        <input v-model="email" class="form-input" type="email" id="email" placeholder="Email" />
+        <input v-model="email" class="form-input" type="email" id="email" placeholder="Correo" />
         <p v-if="errorEmail" class="error">{{ errorEmail }}</p>
       </div>
 
       <div class="form-group">
         <label class="form-label" for="password">Contraseña:</label>
-        <input v-model="password" class="form-input" type="password" id="password" placeholder="Password" />
+        <input v-model="password" class="form-input" type="password" id="password" placeholder="Contraseña" />
         <p v-if="errorPassword" class="error">{{ errorPassword }}</p>
       </div>
 
       <p v-if="error" class="error">{{ error }}</p>
 
-      <input class="form-submit" type="submit" value="Login" />
+      <input class="form-submit" type="submit" value="Iniciar sesión" />
     </form>
   </div>
 </template>
