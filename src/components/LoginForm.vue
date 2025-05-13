@@ -1,21 +1,40 @@
 <template>
   <div class="form-container">
+    
     <form class="form" @submit.prevent="login">
       <div class="form-group">
-        <label class="form-label" for="email">Email:</label>
-        <input v-model="email" class="form-input" type="email" id="email" placeholder="Correo" />
+        <label class="form-label" for="email">Correo:</label>
+        <input 
+          v-model="email" 
+          class="form-input" 
+          type="email" 
+          id="email" 
+          required
+          placeholder="Correo" />
         <p v-if="errorEmail" class="error">{{ errorEmail }}</p>
       </div>
 
       <div class="form-group">
         <label class="form-label" for="password">Contraseña:</label>
-        <input v-model="password" class="form-input" type="password" id="password" placeholder="Contraseña" />
+        <input 
+          v-model="password" 
+          class="form-input" 
+          type="password" 
+          id="password" 
+          required 
+          placeholder="Contraseña" />
         <p v-if="errorPassword" class="error">{{ errorPassword }}</p>
       </div>
 
       <p v-if="error" class="error">{{ error }}</p>
 
       <input class="form-submit" type="submit" value="Iniciar sesión" />
+
+      <div class="form-group">
+        <label class="form-label"> ¿No tienes cuenta? <router-link to="/register">Regístrate</router-link> </label>
+        
+      </div>
+
     </form>
   </div>
 </template>
@@ -78,7 +97,7 @@ export default {
 .form {
   width: 300px;
   padding: 20px;
-  background: rgb(64, 64, 86);
+  background: rgb(0,121,52);
   border-radius: 5px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
@@ -102,17 +121,30 @@ export default {
 }
 
 .form-submit {
-  background: #1ab188;
+  background: rgb(236,170,1);
   border: none;
   color: white;
   padding: 10px;
   margin-top: 10px;
   cursor: pointer;
+  transition: background 0.2s;
+  &:hover {
+    background: rgb(220, 172, 52);
+  }
 }
 
 .error {
-  color: #ff4a96;
+  color: #ff8787;
   font-size: 0.9rem;
+  font-weight: bold;
   margin-top: 5px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px;
+  color: white;
 }
 </style>

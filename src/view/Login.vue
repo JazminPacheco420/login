@@ -1,6 +1,6 @@
 <template>
   <div class="login">
-    <h1 class="title">Iniciar sesión</h1>
+    <h1 class="title">Iniciar sesión en Mi Gurú</h1>
     <LoginForm />
   </div>
 </template>

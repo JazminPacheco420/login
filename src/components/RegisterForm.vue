@@ -1,6 +1,6 @@
 <template>
   <div class="register">
-    <h1 class="title">Registro</h1>
+    
     <form class="form" @submit.prevent="register">
       <label class="form-label" for="nombre">Nombre:</label>
       <input
@@ -11,14 +11,14 @@
         required
         placeholder="Nombre"
       />
-      <label class="form-label" for="email">Email:</label>
+      <label class="form-label" for="email">Correo:</label>
       <input
         v-model="email"
         class="form-input"
         type="email"
         id="email"
         required
-        placeholder="Email"
+        placeholder="Correo"
       />
       <label class="form-label" for="rol">Rol:</label>
       <input
@@ -29,14 +29,14 @@
         required
         placeholder="Rol"
       />
-      <label class="form-label" for="password">Password:</label>
+      <label class="form-label" for="password">Contraseña:</label>
       <input
         v-model="password"
         class="form-input"
         type="password"
         id="password"
         required
-        placeholder="Password"
+        placeholder="Contraseña"
       />
       <label class="form-label" for="password-repeat">Confirma la contraseña:</label>
       <input
@@ -45,9 +45,14 @@
         type="password"
         id="password-repeat"
         required
-        placeholder="Repite contraseña"
+        placeholder="Confirma la contraseña"
       />
-      <input class="form-submit" type="submit" value="Registrar" />
+      <input class="form-submit" type="submit" value="Registrarse" />
+
+      <div class="form-group">
+        <label class="form-label"> ¿Ya tienes cuenta? <router-link to="/login">Inicia sesión</router-link> </label>
+        
+      </div>
     </form>
   </div>
 </template>
@@ -114,7 +119,7 @@ export default {
   width: 20%;
   min-width: 350px;
   max-width: 100%;
-  background: rgba(19, 35, 47, 0.9);
+  background: rgb(0,121,52);
   border-radius: 5px;
   padding: 40px;
   box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.3);
@@ -123,6 +128,8 @@ export default {
   margin-top: 2rem;
   color: white;
   margin-bottom: 0.5rem;
+  font-weight: bold;
+  text-align: center;
   &:first-of-type {
     margin-top: 0rem;
   }
@@ -139,7 +146,7 @@ export default {
   }
 }
 .form-submit {
-  background: #1ab188;
+  background: rgb(236,170,1);
   border: none;
   color: white;
   margin-top: 3rem;
@@ -147,8 +154,14 @@ export default {
   cursor: pointer;
   transition: background 0.2s;
   &:hover {
-    background: #0b9185;
+    background: rgb(220, 172, 52);
   }
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center; // centra label e input
+  width: 100%;
 }
 .error {
   margin: 1rem 0 0;

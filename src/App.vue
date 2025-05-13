@@ -1,11 +1,12 @@
 <template>
-  <div>
+  <!--<div>
     <nav>
-      <router-link to="/login">Login</router-link>
-      <router-link to="/register">Register</router-link>
+      <router-link to="/login">Iniciar sesión</router-link>
+      <router-link to="/register">Registrarse</router-link>
     </nav>
-    <router-view></router-view>
-  </div>
+    
+  </div>-->
+  <router-view></router-view>
 </template>
 
 <script>

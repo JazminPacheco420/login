@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>Registro</h1>
+  <div class="register">
+    <h1 class="title">Registrarse</h1>
     <RegisterForm @register="registerUser" />
   </div>
 </template>
@@ -28,3 +28,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.register {
+  padding: 2rem;
+  text-align: center;
+}
+</style>
