@@ -103,12 +103,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* Tus estilos siguen igual */
-</style>
-
-<style lang="scss" scoped>
 .register {
+  display: flex;
   padding: 2rem;
+  align-items: baseline;
 }
 .title {
   text-align: center;
@@ -118,6 +116,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
   width: 20%;
   min-width: 350px;
   max-width: 100%;

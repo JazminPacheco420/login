@@ -31,7 +31,7 @@ export default {
 
 <style scoped>
 .register {
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="form-container">
+  <div class="login">
     
     <form class="form" @submit.prevent="login">
       <div class="form-group">
@@ -79,10 +79,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.form-container {
+.login {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
   height: 100vh;
   background: #ffffff; // Puedes cambiar esto por una imagen o color de fondo
 }

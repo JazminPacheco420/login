@@ -17,7 +17,7 @@ export default {
 
 <style scoped>
 .login {
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 </style>
