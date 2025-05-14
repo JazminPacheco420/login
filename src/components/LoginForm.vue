@@ -106,7 +106,7 @@ export default {
   display: block;
   margin: 10px 0 5px;
   color: white;
-  font-weight: bold;
+  //font-weight: bold;
   text-align: center; // centra el texto
   //width: 100%;         // asegura que ocupe todo el ancho del formulario
 }

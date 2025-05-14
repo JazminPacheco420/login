@@ -21,14 +21,16 @@
         placeholder="Correo"
       />
       <label class="form-label" for="rol">Rol:</label>
-      <input
+      <select
         v-model="rol"
         class="form-input"
-        type="text"
         id="rol"
-        required
-        placeholder="Rol"
-      />
+        required>
+        <option disabled value="">Selecciona un rol</option>
+        <option value="Estudiante" style="color: black;">Estudiante</option>
+        <option value="Creador" style="color: black;">Creador</option>
+      </select>
+
       <label class="form-label" for="password">Contraseña:</label>
       <input
         v-model="password"
@@ -128,7 +130,7 @@ export default {
   margin-top: 2rem;
   color: white;
   margin-bottom: 0.5rem;
-  font-weight: bold;
+  //font-weight: bold;
   text-align: center;
   &:first-of-type {
     margin-top: 0rem;
